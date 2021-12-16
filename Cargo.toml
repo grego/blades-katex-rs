@@ -1,10 +1,15 @@
 [package]
 name = "blades-katex"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 blades = { version = "0.3.0-alpha", default_features = false }
-rayon = "1.5"
+serde = { version = "^1.0.126", features = ["derive"] }
 serde_json = "1"
+bincode = "1.2.3"
+beef = "0.5.1"
 katex = "0.4"
+logos = "0.12"
+nohash-hasher = "0.2"
+fnv = "1"

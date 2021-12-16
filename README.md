@@ -1,0 +1,20 @@
+A transform plugin for [Blades](https://getblades.org) that renders formulas
+using [KaTeX](https://katex.org).
+Formulas delimited by `$` are rendered in inline mode and by `$$` in display mode.
+Formulas are cached, so they don't have to be rendered multiple times.
+
+This plugin can be built as
+```bash
+cargo build --release
+```
+
+Or installed as
+```bash
+cargo install --path .
+```
+
+Then, it can be used in Blades as
+```toml
+[plugins]
+transform = ["blades-katex"]
+```
