@@ -3,12 +3,7 @@ using [KaTeX](https://katex.org).
 Formulas delimited by `$` are rendered in inline mode and by `$$` in display mode.
 Formulas are cached, so they don't have to be rendered multiple times.
 
-This plugin can be built as
-```bash
-cargo build --release
-```
-
-Or installed as
+This plugin can be installed as
 ```bash
 cargo install --path .
 ```

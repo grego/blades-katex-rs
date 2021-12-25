@@ -67,15 +67,16 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
 name = "blades"
-version = "0.3.0-alpha"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9342fb3f69ee792385ee1b754f795c25a359d953ad502b23f25839a082e3c724"
+version = "0.3.0"
+source = "git+https://github.com/grego/blades#e596b573b465d5c5883968363f3dfb28508190b1"
 dependencies = [
  "ahash",
  "arrayvec",
  "beef",
  "chrono",
  "cmark-syntax",
+ "fnv",
+ "hashbrown",
  "parking_lot",
  "pulldown-cmark",
  "ramhorns",
@@ -125,11 +126,10 @@ dependencies = [
 
 [[package]]
 name = "cmark-syntax"
-version = "0.1.2"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c9bafab67705c7fd498c1030e9738d9c1699ab6598a1cc54be600e005b17abd4"
+checksum = "0ea722d264c5da004d1dd4917692ac7fd1eba290a7b56772b9fa243a8762be5c"
 dependencies = [
- "latex2mathml",
  "logos",
  "pulldown-cmark",
 ]
@@ -242,6 +242,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "hashbrown"
+version = "0.11.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ab5ef0d4909ef3724cc8cce6ccc8572c5c817592e9285f5464f8e86f8bd3726e"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "heck"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -302,12 +311,6 @@ dependencies = [
  "winapi 0.2.8",
  "winapi-build",
 ]
-
-[[package]]
-name = "latex2mathml"
-version = "0.2.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "678cf5bdb3ba63a264e6e0c9eee36538ca1d2da0afa4dd801c1f96309e710765"
 
 [[package]]
 name = "libc"
@@ -455,9 +458,9 @@ dependencies = [
 
 [[package]]
 name = "pulldown-cmark"
-version = "0.8.0"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ffade02495f22453cd593159ea2f59827aae7f53fa8323f756799b670881dcf8"
+checksum = "acd16514d1af5f7a71f909a44ef253cdb712a376d7ebc8ae4a471a9be9743548"
 dependencies = [
  "bitflags",
  "getopts",
@@ -487,8 +490,7 @@ dependencies = [
 [[package]]
 name = "ramhorns"
 version = "0.13.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e1a49bc1fc5a91b75c965f2b1a9c4975bdab1f35b977e605615418aa3baad85d"
+source = "git+https://github.com/grego/ramhorns?branch=shorthand#ffd11bfea3a8130a0fb16c532290b0d09ac057aa"
 dependencies = [
  "ahash",
  "arrayvec",
