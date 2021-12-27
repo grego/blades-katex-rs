@@ -11,8 +11,8 @@ static CACHE_FILE: &str = ".rkatex.cache";
 
 #[derive(Logos, Copy, Clone, Debug)]
 enum Expr {
-    #[regex(r"\$\$((?:[^\$]|\\\$)+)[^\\]\$\$", |_| true)]
-    #[regex(r"\$((?:[^\$]|\\\$)+)[^\\]\$", |_| false)]
+    #[regex(r"\$\$(([^\$]|\\\$)*)[^\\]\$\$", |_| true)]
+    #[regex(r"\$(([^\$]|\\\$)*)[^\\]\$", |_| false)]
     Math(bool),
 
     #[error]
@@ -48,7 +48,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let mut rendered = String::new();
 
         while let Some(token) = lex.next() {
-            let s = lex.slice();
+            let s = dbg!(lex.slice());
             if let Expr::Math(display) = token {
                 if !found {
                     found = true;

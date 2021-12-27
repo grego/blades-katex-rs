@@ -2,4 +2,4 @@ title = "KaTeX test"
 description = "Basic KaTeX test site"
 
 [plugins]
-transform = ["../target/release/blades-katex"]
+transform = ["../target/debug/blades-katex"]
