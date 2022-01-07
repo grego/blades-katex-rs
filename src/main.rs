@@ -15,6 +15,9 @@ enum Expr {
     #[regex(r"\$(([^\$]|\\\$)*)[^\\]\$", |_| false)]
     Math(bool),
 
+    #[regex(r"```([^`]|`[^`]|``[^`])*[^\\]```")]
+    Codeblock,
+
     #[error]
     Plaintext,
 }
