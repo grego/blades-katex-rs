@@ -5,7 +5,7 @@ Formulas are cached, so they don't have to be rendered multiple times.
 
 This plugin can be installed as
 ```bash
-cargo install --path .
+cargo install blades-katex
 ```
 
 Then, it can be used in Blades as
