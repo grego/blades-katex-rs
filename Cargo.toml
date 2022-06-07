@@ -2,6 +2,8 @@
 name = "blades-katex"
 version = "0.1.2"
 edition = "2021"
+description = "A transform plugin for Blades to render formulas using KaTeX"
+license = "GPL-3.0-or-later"
 
 [dependencies]
 blades = { version = "0.3", default_features = false }
